@@ -4,7 +4,7 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { motion, useAnimation } from "framer-motion"
-
+import SplashScreen from "../splashScreen"
 import { useOnScreen } from "../../hooks/"
 import Context from "../../context/"
 import ContentWrapper from "../../styles/contentWrapper"
@@ -52,7 +52,7 @@ const StyledContentWrapper = styled(ContentWrapper)`
       border-radius: ${({ theme }) => theme.borderRadius};
       box-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.16);
       filter: grayscale(20%) contrast(1) brightness(90%);
-      transition: all 0.3s ease-out;
+      transition: all 0.5s ease-out;
       &:hover {
         filter: grayscale(50%) contrast(1) brightness(90%);
         transform: translate3d(0px, -0.125rem, 0px);
@@ -75,6 +75,18 @@ const About = ({ content }) => {
   // Required for animating the image
   const iRef = useRef()
   const iOnScreen = useOnScreen(iRef)
+
+  // Start Animations after the splashScreen sequence is done
+  //   useEffect(() => {
+  //     const pageLoadSequence = async () => {
+  //       if (isIntroDone) {
+  //         if (tOnScreen) tControls.start({ opacity: 1, y: 0 })
+  //         if (iOnScreen) iControls.start({ opacity: 1, x: 0 })
+  //       }
+  //     }
+  //     pageLoadSequence()
+  //   }, [isIntroDone])
+  //   }, [isIntroDone, tControls, iControls, tOnScreen, iOnScreen])
 
   // Only trigger animations if the intro is done or disabled
   useEffect(() => {

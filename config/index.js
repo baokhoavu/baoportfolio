@@ -1,8 +1,9 @@
 module.exports = {
   //-- SITE SETTINGS -----
-  author: "@konstantinmuenster",
-  siteTitle: "Gatsby Starter Portfolio Minimal",
-  siteShortTitle: "Gatsby", // Used as logo text in header, footer, and splash screen
+  author: "@BaokhoaVu",
+  siteTitle: "Bao Gatsby Portfolio",
+  siteShortTitle: "BV", // Used as logo text in header, footer, and splash screen
+  siteHeader: "content/male.jpg",
   siteDescription:
     "A modern one-page portfolio with a clean yet expressive design.",
   siteUrl: "https://gatsby-starter-portfolio-minimal.netlify.app/",
@@ -14,15 +15,15 @@ module.exports = {
   colors: {
     lightTheme: {
       primary: "#000000",
-      secondary: "rgba(137, 196, 244, 1)",
+      secondary: "#bdbdbd",
       tertiary: "#F2F2F2",
       text: "#000000",
       subtext: "#555555",
-      background: "rgba(52, 73, 94, 1)",
-      card: "#FFFFFF",
+      background: "#cdcdd8",
+      card: "#fff",
       scrollBar: "rgba(0, 0, 0, 0.5)",
-      boxShadow: "rgba(0, 0, 0, 0.16)",
-      boxShadowHover: "rgba(0, 0, 0, 0.32)",
+      boxShadow: "#bdbdbd",
+      boxShadowHover: "#bdbdbd",
     },
     darkTheme: {
       primary: "#FAFAFA",
@@ -56,36 +57,27 @@ module.exports = {
   socialMedia: [
     {
       name: "Linkedin",
-      url: "https://www.linkedin.com/in/konstantin-muenster/",
-    },
-    {
-      name: "Medium",
-      url: "https://konstantinmuenster.medium.com/",
+      url: "https://www.linkedin.com/in/baokhoadvu/",
     },
     {
       name: "Github",
-      url:
-        "https://github.com/konstantinmuenster/gatsby-starter-portfolio-minimal",
-    },
-    {
-      name: "Behance",
-      url: "https://www.behance.net/konstanmnster",
+      url: "https://github.com/baokhoavu",
     },
   ],
 
   //-- NAVIGATION SETTINGS -----
   navLinks: {
     menu: [
-      {
-        name: "Articles",
-        url: "/#articles",
-      },
+      //   {
+      //     name: "Articles",
+      //     url: "/#articles",
+      //   },
       {
         name: "About Me",
         url: "/#about",
       },
       {
-        name: "Features",
+        name: "Projects",
         url: "/#projects",
       },
     ],

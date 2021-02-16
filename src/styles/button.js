@@ -16,6 +16,7 @@ const StyledButton = styled.button`
   border-radius: ${({ theme }) => theme.borderRadius};
   text-decoration: none;
   text-align: ${({ textAlign }) => (textAlign ? textAlign : "left")};
+
   &:hover,
   &:focus,
   &:active {

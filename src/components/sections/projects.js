@@ -285,10 +285,10 @@ const Projects = ({ content }) => {
                   }
                 >
                   <div className="details">
+                    <div className="title">{frontmatter.title}</div>
                     <div className="category">
                       {frontmatter.emoji} {frontmatter.category}
                     </div>
-                    <div className="title">{frontmatter.title}</div>
                     <MDXRenderer>{body}</MDXRenderer>
                     <div className="tags">
                       {frontmatter.tags.map(tag => (
@@ -354,7 +354,7 @@ const Projects = ({ content }) => {
           ref={bRef}
           variants={bVariants}
           animate={bOnScreen ? "visible" : "hidden"}
-          className="cta-btn"
+          className="cta-btn project"
           href={sectionDetails.frontmatter.buttonUrl}
           target="_blank"
           rel="nofollow noopener noreferrer"

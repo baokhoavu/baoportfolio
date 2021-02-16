@@ -37,7 +37,7 @@ const IndexPage = ({ data }) => {
         />
         <Hero content={data.hero.edges} />
         {/* Articles is populated via Medium RSS Feed fetch */}
-        <Articles />
+        {/* <Articles /> */}
         <About content={data.about.edges} />
         <Interests content={data.interests.edges} />
         <Projects content={data.projects.edges} />
@@ -76,6 +76,23 @@ export const pageQuery = graphql`
             subtitlePrefix
             subtitle
             icon {
+              childImageSharp {
+                fluid(maxWidth: 60, quality: 90) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    logo: allMdx(filter: { fileAbsolutePath: { regex: "/index/logo/" } }) {
+      edges {
+        node {
+          body
+          frontmatter {
+            icon {
+              relativePath
               childImageSharp {
                 fluid(maxWidth: 60, quality: 90) {
                   ...GatsbyImageSharpFluid
