@@ -13,11 +13,9 @@ cd portfolio-minimal
 gatsby develop
 ```
 
-A Gatsby React stack website Portfolio listing out projects using react hooks and transitions. GraphQL is incorporated for Markdown Javascript intergration for pages. Styles and layout use styled components with Tailwind in order to create a seameless and minimal responsive stylesheet mix.
-
 ## Demo
 
-### [https://baolog.vercel.app/](https://baolog.vercel.app/)
+### [https://baoportfolio.vercel.app/](https://baoportfolio.vercel.app/)
 
 ### Technologies
 
