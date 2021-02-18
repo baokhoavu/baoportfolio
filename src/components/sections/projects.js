@@ -286,9 +286,6 @@ const Projects = ({ content }) => {
                 >
                   <div className="details">
                     <div className="title">{frontmatter.title}</div>
-                    <div className="category">
-                      {frontmatter.emoji} {frontmatter.category}
-                    </div>
                     <MDXRenderer>{body}</MDXRenderer>
                     <div className="tags">
                       {frontmatter.tags.map(tag => (
@@ -298,23 +295,6 @@ const Projects = ({ content }) => {
                       ))}
                     </div>
                     <div className="links">
-                      {frontmatter.github && (
-                        <a
-                          href={frontmatter.github}
-                          target="_blank"
-                          rel="nofollow noopener noreferrer"
-                          aria-label="External Link"
-                        >
-                          <Icon
-                            name="github"
-                            color={
-                              darkMode
-                                ? darkTheme.colors.subtext
-                                : lightTheme.colors.subtext
-                            }
-                          />
-                        </a>
-                      )}
                       {frontmatter.external && (
                         <a
                           href={frontmatter.external}
@@ -324,6 +304,23 @@ const Projects = ({ content }) => {
                         >
                           <Icon
                             name="external"
+                            color={
+                              darkMode
+                                ? darkTheme.colors.subtext
+                                : lightTheme.colors.subtext
+                            }
+                          />
+                        </a>
+                      )}
+                      {frontmatter.github && (
+                        <a
+                          href={frontmatter.github}
+                          target="_blank"
+                          rel="nofollow noopener noreferrer"
+                          aria-label="External Link"
+                        >
+                          <Icon
+                            name="github"
                             color={
                               darkMode
                                 ? darkTheme.colors.subtext

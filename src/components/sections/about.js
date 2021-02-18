@@ -52,7 +52,7 @@ const StyledContentWrapper = styled(ContentWrapper)`
       border-radius: ${({ theme }) => theme.borderRadius};
       box-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.16);
       filter: grayscale(20%) contrast(1) brightness(90%);
-      transition: all 0.5s ease-out;
+      transition: all 0.25s ease-out;
       &:hover {
         filter: grayscale(50%) contrast(1) brightness(90%);
         transform: translate3d(0px, -0.125rem, 0px);
@@ -102,7 +102,7 @@ const About = ({ content }) => {
         <motion.div
           className="inner-wrapper"
           ref={tRef}
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 5 }}
           animate={tControls}
         >
           <h3 className="section-title">{frontmatter.title}</h3>
@@ -113,7 +113,7 @@ const About = ({ content }) => {
         <motion.div
           className="image-content"
           ref={iRef}
-          initial={{ opacity: 0, x: 20 }}
+          initial={{ opacity: 0, x: 5 }}
           animate={iControls}
         >
           <Img
