@@ -1,4 +1,4 @@
-import React, { useRef, useContext, useEffect } from "react"
+import React, { useRef, useState, useContext, useEffect } from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import Img from "gatsby-image"
@@ -68,6 +68,8 @@ const About = ({ content }) => {
   const tControls = useAnimation()
   const iControls = useAnimation()
 
+  const [visibleProject, setVisibleProject] = useState(1)
+
   // Required for animating the text content
   const tRef = useRef()
   const tOnScreen = useOnScreen(tRef)
@@ -90,6 +92,7 @@ const About = ({ content }) => {
 
   // Only trigger animations if the intro is done or disabled
   useEffect(() => {
+    setVisibleProject(1)
     if (isIntroDone) {
       if (tOnScreen) tControls.start({ opacity: 1, y: 0 })
       if (iOnScreen) iControls.start({ opacity: 1, x: 0 })
