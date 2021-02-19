@@ -15,6 +15,8 @@ const StyledHeader = motion.custom(styled.header`
   width: 100%;
   height: ${({ theme }) => theme.headerHeight};
   background: ${({ theme }) => theme.colors.background};
+  position: fixed;
+  z-index: 10;
 `)
 
 const StyledContentWrapper = styled(ContentWrapper)`
